@@ -1,18 +1,17 @@
+# Revisão: list comprehension é uma forma mais limpa de criar e manusear listas
+# Faça uma lista de valores aleatórios
+
 import random
 
+# Sem list comprehension
+lista_numeros = []
+for numero in range(0, 20):
+    lista_numeros.append(random.randint(0, 100))
+print(f'Lista aleatória sem list comprehension: {lista_numeros}')
 
-# Make a list of random values
-our_list = []
-for value in range(0,20):
-    our_list.append(random.randint(0,100))
+# Com list comprehension
+lista_c = [valor for valor in range(0,20+1)]     # síntaxe: valor + loop for
+print(f'Lista de 0-20 com list comprehension: {lista_c}')
 
-print(our_list)
-
-# Making a list using list comprehension
-
-new_list = [value for value in range(0,20)]     # [ value which is being inserted into my list -- for loop ]
-
-
-new_list = [random.randint(0,100) for value in range(0,20)]
-
-print(new_list)
+lista_c = [random.randint(0, 100) for valor in range(0, 20)]
+print(f'Lista aleatória com list comprehension: {lista_c}')

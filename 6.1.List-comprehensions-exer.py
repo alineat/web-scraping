@@ -1,43 +1,37 @@
-#Find all of the numbers from 1-1000 that are divisible by 7
-results = [num for num in range(1000) if num % 7 == 0]
-#print(results)
+# Encontre todos os números de 1-1000 que sejam divisíveis por 7
+div7 = [num for num in range(1, 1001) if num % 7 == 0]
+print(f'Divisíveis por 7: {div7}\n')
 
-#Find all of the numbers from 1-1000 that have a 3 in them
-results = [num for num in range(1000) if '3' in list(str(num))]
-#print(results)
+# Encontre todos os nºs de 1-1000 que contenham o nº 3
+lista_do_tres = [num for num in range(1, 1001) if '3' in str(num)]
+print(f'Nºs que contém o 3: {lista_do_tres}\n')
 
-#Count the number of spaces in a string
-teststring = 'Find all of the words in a string that are less than 4 letters'
-#print(teststring.count(' '))   # normally I'd just do this, but for the practice....
-results = [character for character in teststring if character == ' ']
-#print(len(results))
+# Conte o número de espaços de uma string (normalmente usa-se teste.count(''))
+teste = 'Encontre todos os espaços dessa string.'
+espaco = [caracter for caracter in teste if caracter == ' ']
+print(f'Nº de strings da frase: {len(espaco)}\n')
 
-#Remove all of the vowels in a string [make a list of the non-vowels]
-teststring = 'Find all of the words in a string that are less than 4 letters'
-vowels = ['a','e','i','o','u',' ']
-results = [letter for letter in teststring if letter.lower() not in vowels]
-#print(results)
+# Remova todas as vogais de uma string e faça uma lista de consoantes
+string = 'Remova todas as vogais dessa string'
+vogais = ['a', 'e', 'i', 'o', 'u', ' ']
+consoantes = [letra for letra in string if letra.lower() not in vogais]
+print(f'Consoantes: {consoantes}\n')
 
-#Find all of the words in a string that are less than 4 letters
-teststring = 'Find all of the words in a string that are less than 4 letters'
-results = [word for word in teststring.split() if len(word) < 4]
-#print(results)
+# Encontre todas as palavras da string que tenham menos de 4 letras
+frase = 'Encontre todas as palavras que tenham menos de 4 letras nessa frase'
+palavra4 = [palavra for palavra in frase.split() if len(palavra) < 4]
+print(f'Palavras com menos de 4 letras: {palavra4}\n')
 
-# CHALLENGE!
-#Use a dictionary comprehension to count the length of each word in a sentence.
-sentence = 'Use a dictionary comprehension to count the length of each word in a sentence'
-results = {word:len(word) for word in sentence.split()}
-#print(results)
+# Conte o comprimento de cada palavra em uma sentença
+sentenca = 'Conte o comprimento de cada palavra desta sentença'
+contagem = {palavra:len(palavra) for palavra in sentenca.split()}
+print(f'Contagem: {contagem}\n')
 
-#Use a nested list comprehension to find all of the numbers from 1-1000 that
-#are divisible by any single digit besides 1 (2-9)
-# comprehension testing truth for divisibilty: [True for divisor in range(2,10) if number % divisor == 0]
-results = [number for number in range(1,1001) if True in [True for divisor in range(2,10) if number % divisor == 0]]
-#print(results)
+# Encontre todos os números de 1-1000 que sejam divisíveis por números de um dígito (2-9), exceto o 1
+divisiveis = [numero for numero in range(1, 1001) if True in [True for divisor in range(2, 10) if numero % divisor == 0]]
+print(f'Divisíveis por números de um dígito: {divisiveis}\n')
 
-#For all the numbers 1-1000, use a nested list/dictionary comprehension to
-#find the highest single digit any of the numbers is divisible by.
-# List comprehension for providing a list of all of the numbers a number is divisible by: divisor_list:
+# Para todos os números de 1-1000, ache o maior dígito único pelo qual os números sejam divisíveis
 #       [divisor for divisor in range(1,1001) if number % divisor == 0]
-results = {number:max([divisor for divisor in range(1,10) if number % divisor == 0]) for number in range(1,1001)}
-print(results)
+resultado = {numero: max([divisor for divisor in range(1, 10) if numero % divisor == 0]) for numero in range(1, 1001)}
+print(f'Maior divisor de um dígito: {resultado}')
