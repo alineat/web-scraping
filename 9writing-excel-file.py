@@ -1,25 +1,10 @@
-from xlsxwriter import Workbook     # neccessary import
+from xlsxwriter import Workbook
 
-
-
-# make workbook
-
-workbook = Workbook('first_file.xlsx')
-
-
-
-# add work sheet
-
+workbook = Workbook('9nome_do_arquivo_que_quero_criar.xlsx')
 worksheet = workbook.add_worksheet()
 
-
-# write function - parameters - ( row,column, value )
-
-for row in range(200):
-    worksheet.write(row,0,'Row Number')
-    worksheet.write(row,1,row)
-
-
-# close workbook
+for linha in range(20):
+    worksheet.write(linha, 0, 'Nº da linha')
+    worksheet.write(linha, 1, linha)
 
 workbook.close()

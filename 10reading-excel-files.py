@@ -1,25 +1,9 @@
-import xlrd     # import
+import xlrd
 
-
-
-# open workbook
-
-workbook = xlrd.open_workbook('first-file.xlsx')
-
-
-
-# get sheet - method - sheet_by_index(index parameter)
-
+workbook = xlrd.open_workbook('9nome_do_arquivo_que_quero_criar.xlsx')
 worksheet = workbook.sheet_by_index(0)
+linhas = worksheet.nrows
 
-
-# find total no of rows - .nrows
-
-rows = worksheet.nrows
-
-
-# read rows - row_values(row number)
-
-for row in range(rows):
-    first_col,second_col = worksheet.row_values(row)
-    print(first_col,'    ',second_col)
+for linha in range(linhas):
+    first_col, second_col = worksheet.row_values(linha)
+    print(first_col, '    ', second_col)
