@@ -2,12 +2,9 @@ import requests
 
 resposta = requests.get('https://www.google.com')
 print(resposta.status_code)
-#Headers returned
 
-# response.headers
-
+# Retorna header
 print(resposta.headers)
-
 
 for chave, valor in resposta.headers.items():
     print(chave, '   ', valor)

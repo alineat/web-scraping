@@ -13,13 +13,16 @@ def leia_arquivo():
 
 
 soup = BeautifulSoup(leia_arquivo(), 'lxml')
-
-# Navigable strings - para acessar o conteúdo das tags, use o método <.string>
 title = soup.title
-print(title.string)
 print(title)
 
-# Para substituir o conteúdo da string, use <.replace_with("")>
-print(f'Título antes: {title}')
-title.string.replace_with("title has been changed")
-print(f'Título depois: {title}')
+parent = title.parent
+print(parent)
+print(parent.name)
+
+# Quem é o pai do html?
+html = soup.html
+print(type(html.parent))
+
+# Quem é o pai do soup
+print(soup.parent)

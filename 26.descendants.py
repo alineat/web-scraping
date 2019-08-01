@@ -1,16 +1,20 @@
 from bs4 import BeautifulSoup
 
 
-def read_file():
-    file = open('24.three-sisters.html')
-    data = file.read()
-    file.close()
-    return data
+def leia_arquivo():
+    '''
+    -> Lê um arquivo HTML.
+    :return: os dados do arquivo HTML.
+    '''
+    arquivo = open('20.intro-to-soup-html.html')
+    dado = arquivo.read()
+    arquivo.close()
+    return dado
 
 
-soup = BeautifulSoup(read_file(), 'lxml')
+soup = BeautifulSoup(leia_arquivo(), 'lxml')
 
-# .contents             --- returns us direct children of the said tag
+# .contents: retorna os filhos diretos da tag
 '''
 body = soup.body
 print(body.contents)
@@ -24,11 +28,7 @@ print(children)
 print(len(children))
 '''
 
-
-# .descendants  -- returns us all the children of the said tag -- generator
-
-
-for index,child in enumerate(soup.head.descendants):
-    print(index)
+# .descendants: retorna todos os filhos da tag e o gerador
+for indice, child in enumerate(soup.head.descendants):
+    print(indice)
     print(child if child != '\n' else '\\n')
-

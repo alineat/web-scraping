@@ -6,18 +6,16 @@ def leia_arquivo():
     -> Lê um arquivo HTML.
     :return: os dados do arquivo HTML.
     '''
-    arquivo = open('20.intro-to-soup-html.html')
+    arquivo = open('27.three-sisters.html')
     dado = arquivo.read()
     arquivo.close()
     return dado
 
 
 soup = BeautifulSoup(leia_arquivo(), 'lxml')
-meta = soup.meta
-
-# modificando atributos
 body = soup.body
-body['style'] = 'some style'
+print(soup.html.contents)
 
-# Atributos multivalores
-print(body['class'])
+# do <body> vá para o irmão anterior <head>
+
+print(body.previous_sibling.previous_sibling)
