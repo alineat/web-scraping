@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+import re
 
 
 def leia_arquivo():
@@ -6,7 +7,7 @@ def leia_arquivo():
     -> Lê um arquivo HTML.
     :return: os dados do arquivo HTML.
     '''
-    arquivo = open('27.intro-to-soup-html.html')
+    arquivo = open('27.three-sisters.html')
     dado = arquivo.read()
     arquivo.close()
     return dado
@@ -34,3 +35,29 @@ print(tag_a)
 # Parâmetro limit: limita o número de buscas que será retornado
 a_tags = soup.find_all('a',limit=2)
 print(a_tags)
+
+# Parâmetro String: a entrada é uma string ou um objeto RegEx. Retorna uma string navegável.
+print('Procurando a string Elsie no meu documento:')
+regex = re.compile('Elsie')
+tag = soup.find_all(string=regex)
+print(f'{tag}\n')
+
+print('Busca da string \"story\":')
+regex = re.compile('story')
+tag = soup.find_all(string=regex)
+print(f'{tag}\n')
+
+# Parâmetro **kwargs (keyword arguments)
+print('Busque as tags de class \"sister\":')
+tags = soup.find_all(class_='sister')  # usar um ou + atributos da tag q quero encontrar: (find_all(id='link', href=...))
+for tag in tags:
+    print(tag)
+print(f'Foram encontrados {len(tags)} tags com class \"sister\".\n')
+# P.S: para escrever um atributo class use "class_", pois "class" é uma palavra-chave do Python
+
+# Parâmetro recursive
+# Ex: se eu quiser pesquisar nos filhos diretos do <html>, não preciso pesquisar no documento inteiro. "recursive" força
+# o BS a olhar apenas nesse nível, do contrário e por padrão ele buscaria no documento inteiro a tag "title"
+# (recursive=True é o padrão)
+title = soup.find_all('title', recursive=False)  # só pesquisamos os descendentes diretos da tag
+print(title)  # retorna uma lista vazia, pois só pode buscar nas tags body e head
