@@ -366,7 +366,7 @@ Car repair shops
 </div>
 <div class="crux-body-copy">
 <a href="/cro/car-seats.htm" class="products-a-z__results__item">
-Car seats
+Car Seats
 </a>
 </div>
 <div class="crux-body-copy">
@@ -1004,7 +1004,7 @@ Rewards cards
 </a>
 </div>
 <div class="crux-body-copy">
-<a href="/cro/roofing/buying-guide/index.htm" class="products-a-z__results__item">
+<a href="/cro/roofing.htm" class="products-a-z__results__item">
 Roofing
 </a>
 </div>
@@ -1417,7 +1417,7 @@ Yogurt
     If global header and footer componenents are used on the same page, the following dependencies can be used instead
     of individual header and footer dependencies
 
-    /etc/designs/versioned-clientlibs/cr/clientlibs/component/globalNavigationStandalone/js/9-0-38/globalNavigationStandalone.js
+    /etc/designs/versioned-clientlibs/cr/clientlibs/component/globalNavigationStandalone/js/9-0-42/globalNavigationStandalone.js
     /etc/designs/versioned-clientlibs/cr/clientlibs/component/globalNavigationStandalone/css/9-1-10/globalNavigationStandalone.css
 -->
 <div id="global-footer" class="globalfooter-wrapper">
@@ -1439,8 +1439,8 @@ Yogurt
 <li><a href="https://www.consumerreports.org/member-support/" title="Contact Us" class='crux-body-copy global-footer__link' data-trackpagelink="['member_support_contact_us', 'footer']">Contact Us</a></li>
 <li><a href="https://secure.consumerreports.org/ec/account/overview" title="Account Settings" class='crux-body-copy global-footer__link' data-trackpagelink="['member_support_account_settings', 'footer']">Account Settings</a></li>
 <li><a href="https://www.consumerreports.org/membership" title="What is Membership?" class='crux-body-copy global-footer__link' data-trackpagelink="['member_support_what_is_membership?', 'footer']">What is Membership?</a></li>
-<li><a href="https://donateconsumers.org/page/36182/donate/1?supporter.NOT_TAGGED_1=9021000141&ask=1000%7C500%7C100%7C50%7C35&ask_selected=50&en_txn6=9021000141" title="Make a Donation" class='crux-body-copy global-footer__link' data-trackpagelink="['member_support_make_a_donation', 'footer']">Make a Donation</a></li>
-<li><a href="https://web.consumerreports.org/newsletter/email-newsletters-step1.html?source=HPFooter" title="Newsletters" class='crux-body-copy global-footer__link' data-trackpagelink="['member_support_newsletters', 'footer']">Newsletters</a></li>
+<li><a href="https://donateconsumers.org/page/36182/donate/1?supporter.NOT_TAGGED_1=0021000141&ask=1000%7C500%7C100%7C50%7C35&ask_selected=50&en_txn6=0021000141" title="Make a Donation" class='crux-body-copy global-footer__link' data-trackpagelink="['member_support_make_a_donation', 'footer']">Make a Donation</a></li>
+<li><a href="https://www.consumerreports.org/email-newsletters?INTKEY=I970GB1N&source=I970GB1N" title="Newsletters" class='crux-body-copy global-footer__link' data-trackpagelink="['member_support_newsletters', 'footer']">Newsletters</a></li>
 <li><a href="https://www.consumerreports.org/gift?INTKEY=GC8CBKST" title="Give a Gift" class='crux-body-copy global-footer__link' data-trackpagelink="['member_support_give_a_gift', 'footer']">Give a Gift</a></li>
 </ul>
 </div>
@@ -1482,7 +1482,7 @@ Yogurt
 <div>
 <ul>
 <li>
-<a href="https://www.consumerreports.org/content/cro/en/consumer-reports-magazine/z2019/August.html" title="Current Issue" class="crux-body-copy global-footer__link" data-trackpagelink="['magazine_and_books_current_issue', 'footer']">Current Issue</a>
+<a href="https://www.consumerreports.org/content/cro/en/consumer-reports-magazine/z2019/September.html" title="Current Issue" class="crux-body-copy global-footer__link" data-trackpagelink="['magazine_and_books_current_issue', 'footer']">Current Issue</a>
 </li>
 <li><a href="https://www.consumerreports.org/cro/magazine/index.htm" title="Magazine Archive" class='crux-body-copy global-footer__link' data-trackpagelink="['magazine_and_books_magazine_archive', 'footer']">Magazine Archive</a></li>
 <li><a href="http://article.images.consumerreports.org/prod/content/dam/cro/corporate/customer-service/5-year-index.pdf" title="5 Year Index" class='crux-body-copy global-footer__link' data-trackpagelink="['magazine_and_books_5_year_index', 'footer']">5 Year Index</a></li>
